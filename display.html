@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Xossalari - Display va Text-align</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 40px;
+        }
+
+        h1 {
+            color: #2d3748;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h2 {
+            color: #4a5568;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #4a5568;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            padding: 12px 20px;
+            margin-bottom: 10px;
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+            color: #4a5568;
+            transition: all 0.3s ease;
+        }
+
+        li:hover {
+            background: #edf2f7;
+            transform: translateX(5px);
+            border-left-color: #764ba2;
+        }
+
+        li strong {
+            color: #667eea;
+            font-family: 'Courier New', monospace;
+        }
+
+        .code-example {
+            background: #2d3748;
+            color: #68d391;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        .highlight {
+            background: #fef5e7;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #f6ad55;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>"Display" xossasi</h1>
+
+        <div class="section">
+            <div class="section-title">Block element</div>
+            <p>
+                <strong>Block element</strong> - ota-ona (parent) elementni to'liq kengligiga yoyiladi va har doim yangi qatordan boshlanadi. 
+                div, h1, h2, ... h6, ul, li va yana bir qator taglar block element yaratad.
+            </p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Inline element</div>
+            <p>
+                <strong>Inline element</strong> - faqatgina o'zini kontenti uchun yetarli bo'ladigan kenglikga ega bo'ladi va yangi qatordan boshlanmaydi, 
+                aksincha yonma-yon joylashadi. span, a va yana bir qator taglar inline element yaratadi.
+            </p>
+        </div>
+
+        <div class="highlight">
+            <div class="section-title">Display</div>
+            <p style="margin-bottom: 15px;">
+                <strong>Display</strong> - elementimizni veb sahifamizda qanday ko'rsatilishini belgilaydi
+            </p>
+            <ul>
+                <li><strong>display: block;</strong> - element block elementga aylanadi</li>                <li><strong>display: inline;</strong> - element inline elementga aylanadi</li>
+                <li><strong>display: none;</strong> - elementni veb sahifasida ko'rsatilmasligini ta'minlaydi</li>
+                <li><strong>inline-block</strong> - element inline elementga aylanadi, lekin block elementning xususiyatlariga ega bo'ladi</li>
+            </ul>
+        </div>
+
+        <h2>Text-align, Vertical Align va Float xossalari</h2>
+
+        <div class="section">
+            <div class="section-title">Text-align</div>
+            <p><strong>Text-align</strong> - element ichidagi matnni gorizontal ravishda hizalaydi</p>
+            <ul>
+                <li><strong>Left</strong> - matnni chap tarafga tekislaydi</li>
+                <li><strong>Center</strong> - matnni markazga tekislaydi</li>
+                <li><strong>Right</strong> - matnni o'ng tarafga tekislaydi</li>
+                <li><strong>Justify</strong> - matnni ikki tomonlama tekislaydi</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Vertical align</div>
+            <p>
+                <strong>Vertical align</strong> - element ichidagi matnni vertikal ravishda hizalaydi
+            </p>
+        </div>
+
+        <div class="code-example">
+/* Misol */
+.block {
+    display: block;
+    text-align: center;
+}
+
+.inline {
+    display: inline;
+}
+
+.none {
+    display: none;
+}
+        </div>
+    </div>
+</body>
+</html>
